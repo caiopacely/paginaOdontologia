@@ -14,6 +14,7 @@ function HomePage(props){
             <DadosProfissionais></DadosProfissionais>
             <Apresentacao></Apresentacao>
             <Localizacao></Localizacao>
+            <Footer></Footer>
         </div>          
        
     )

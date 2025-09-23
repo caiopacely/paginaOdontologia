@@ -4,15 +4,50 @@ function Footer(){
     
     return(
         <>
-            <div className="bg-[#150428] flex h-96 justify-between items-center px-5">
-                <div>
-                    <a href="">Inicio</a>
-                    <a href="">Sobre mim</a>
-                    <a href="">Tratamentos</a>
+            <div className="bg-black flex h-[500px] md:h-[440pxnp ]  w-full  items-center px-5 text-white justify-center">
+                <div className="flex  w-[90%] justify-between flex-col md:flex-row gap-8 ">
+                    <ul class="list-disc text-white ml-5  flex gap-2 md:gap-4 md:flex-col justify-between ">
+                        <div className="flex flex-col gap-2 md:gap-4">
+                            <li><a href="#">Início</a></li>
+                            <li><a href="#">Sobre mim</a></li>
+                            <li><a href="#">Comentários</a></li>
+                        </div>
+                        <div className="flex flex-col gap-2 md:gap-4">
+                            <li><a href="#">Localização</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Agendamentos</a></li>
+                        </div>
+                    </ul>
+                    <div className="flex flex-col md:flex-row gap-8 md:gap-16">
+                        <div className=" flex flex-col gap-3">
+                            <h1 className="text-xl">Siga-nos nas redes sociais!</h1>
+                            <div className="flex gap-3">
+                                <a href=""> <i class="fa-brands fa-instagram text-3xl bg-[#4B2E6D] p-1 rounded-md"></i></a>
+                                <a href=""> <i class="fa-brands fa-tiktok text-3xl bg-[#4B2E6D] p-1 rounded-md"></i></a>
+                               
+                            </div>         
+                        </div>
+                        <div className=" flex flex-col gap-3">
+                            <h1 className="text-xl">Contato</h1>
+                                <div className="flex flex-col gap-2">
+                                    <div className="flex gap-2 items-center">
+                                        <i class="fa-solid fa-envelope text-xl text-[#4B2E6D]"></i>
+                                        <p>dramarinnabarroso@gmail.com</p>
+                                    </div>      
+                                    <div className="flex gap-2 items-center">
+                                        <i class="fa-solid fa-phone text-xl text-[#4B2E6D]"></i>
+                                        <p>(85)988907313</p>
+                                    </div>  
+                                </div>         
+                        </div>
+                        <div className=" flex flex-col">
+                            <a className="text-xl" href="">Politica de privacidade</a>      
+                        </div>
+                        <div className=" flex flex-col ">
+                            <a className="text-xl" href="">Termo de uso</a>        
+                        </div>
+                    </div>
                     
-                </div>
-                <div>
-
                 </div>
             </div>
         </>

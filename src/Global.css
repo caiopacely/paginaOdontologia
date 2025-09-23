@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+#backDados{
+    background-image: url(assets/fundoDadosMB.png);
+}
