@@ -4,7 +4,7 @@ function Footer(){
     
     return(
         <>
-            <div className="bg-black flex h-[500px] md:h-[440pxnp ]  w-full  items-center px-5 text-white justify-center">
+            <div className="bg-black flex h-[400px] md:h-[500px ]  w-full  items-center px-5 text-white justify-center">
                 <div className="flex  w-[90%] justify-between flex-col md:flex-row gap-8 ">
                     <ul class="list-disc text-white ml-5  flex gap-2 md:gap-4 md:flex-col justify-between ">
                         <div className="flex flex-col gap-2 md:gap-4">

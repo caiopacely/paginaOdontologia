@@ -5,7 +5,7 @@ function Apresentacao(){
     return(
         <>  
            <div className="flex flex-col justify-center items-center md:flex-row mt-6">
-                <div className="px-10 py-8 bg-r0">
+                <div className="px-10 py-8 ">
                     <img className="w-[400px] rounded-2xl  " src={FotoMarinna} alt="" />
                 </div>              
                 <div className=" flex flex-col mb-14 md:mb-0  text-center px-6 bgber-300 md:w-[40vw] items-center gap-4 ">
