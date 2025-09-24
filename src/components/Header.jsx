@@ -18,7 +18,6 @@ function Header() {
                 <a className="text-[16px] text-[#4B2E6D] font-bold hover:underline" href="#localizacao">Localização</a>
             </nav>
 
-  
             <div className="lg:hidden">
                 <button
                     onClick={() => setIsOpen(!isOpen)}

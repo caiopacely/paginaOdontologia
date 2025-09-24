@@ -1,11 +1,12 @@
 import Apresentacao from "../components/Apresentacao"
+import Avaliacoes from "../components/Avaliacoes"
 import DadosProfissionais from "../components/DadosProfissionais"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
 import Localizacao from "../components/localizacao"
 import Maps from "../components/Maps"
 
-function HomePage(props){
+function HomePage(){
 
     return(
         
@@ -13,6 +14,7 @@ function HomePage(props){
             <Header></Header>
             <DadosProfissionais></DadosProfissionais>
             <Apresentacao></Apresentacao>
+            <Avaliacoes></Avaliacoes>
             <Localizacao></Localizacao>
             <Footer></Footer>
         </div>          
