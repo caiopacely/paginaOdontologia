@@ -10,6 +10,7 @@ function Agendamentos(){
                 <Header></Header>
                 <InicioAgendamentos></InicioAgendamentos>
                 <FormAgendamento></FormAgendamento>
+                <Footer></Footer>
             </div>
         </>
     )

@@ -1,9 +1,15 @@
 import FundoDados from "../assets/fundoDadosMB.png"
 import ImageDados from "../assets/ImagemComplementar.png"
+import { useNavigate } from 'react-router-dom';
 
 
 function DadosProfissionais(){
+    const navigate = useNavigate();
 
+    const handleAgendamento = () => {
+    navigate('/agendamentos');
+    };
+    
     return(        
         <div id="backDados" className="bg-cover bg-center bg-[#ebebeb] h-full md:h-96 w-full items-center flex flex-col md:flex-row "
         > 
@@ -18,7 +24,7 @@ function DadosProfissionais(){
                     <h1 className="font-bold text-[12px] md:text-[14px] text-[#ffffff]">Especialista em Endodontia/Clínica Geral</h1>
                 </div>
                 <h1 className="font-bold text-[12px] md:text-[16px] text-[#ffffff] italic">Cuide do seu sorriso com quem entende</h1>
-                <button className=" w-60 rounded-md p-4 text-white bg-[#17bd3e] mt-2 hover:bg-[#17bd3e] shadow-[0_0_20px_rgba(0,0,0,0.4)]"> Agende sua consulta </button>          
+                <button className=" w-60 rounded-md p-4 text-white bg-[#17bd3e] mt-2 hover:bg-[#17bd3e] shadow-[0_0_20px_rgba(0,0,0,0.4)]" onClick={handleAgendamento}> Agende sua consulta </button>          
             </div>
             {/* <div className="px-10 py-8 hidden lg:block ">
                  <img className="w-[382px] ml-28 rounded-full border-white border-4 shadow-[0_0_20px_rgba(0,0,0,0.3)]" src={ImageDados} alt="" /> 
