@@ -10,15 +10,24 @@ function HomePage(){
 
     return(
         
-        <div className="flex flex-col items-center">
-            <Header></Header>
-            <DadosProfissionais></DadosProfissionais>
-            <Apresentacao></Apresentacao>
-            <Avaliacoes></Avaliacoes>
-            <Localizacao></Localizacao>
+        <div className="flex flex-col items-center ">
+            
+            <Header></Header>       
+            <section id="dadosProfissionais">
+                <DadosProfissionais></DadosProfissionais>
+            </section>
+            <section id="apresentacao">
+                <Apresentacao></Apresentacao>
+            </section>
+            <section id="avaliacoes"> 
+                <Avaliacoes></Avaliacoes>
+            </section>
+            <section id="localizacao">
+                <Localizacao></Localizacao>
+            </section>
             <Footer></Footer>
         </div>          
-       
+
     )
 }
 

@@ -8,12 +8,12 @@ function Footer(){
                 <div className="flex  w-[90%] justify-between flex-col md:flex-row gap-8 ">
                     <ul class="list-disc text-white ml-5  flex gap-2 md:gap-4 md:flex-col justify-between ">
                         <div className="flex flex-col gap-2 md:gap-4">
-                            <li><a href="#">Início</a></li>
-                            <li><a href="#">Sobre mim</a></li>
-                            <li><a href="#">Comentários</a></li>
+                            <li><a href="#dadosProfissionais">Início</a></li>
+                            <li><a href="#apresentacao">Sobre mim</a></li>
+                            <li><a href="#avaliacoes">Comentários</a></li>
                         </div>
                         <div className="flex flex-col gap-2 md:gap-4">
-                            <li><a href="#">Localização</a></li>
+                            <li><a href="#localizacao">Localização</a></li>
                             <li><a href="#">Blog</a></li>
                             <li><a href="#">Agendamentos</a></li>
                         </div>

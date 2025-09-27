@@ -4,15 +4,15 @@ import { Bs2CircleFill } from "react-icons/bs";
 import { Bs3CircleFill } from "react-icons/bs";
 function FormAgendamento(){
     
-    function actionBtn() {
-    let b1 = document.getElementById("b1");
+    function actionBtn(btn) {
+    let atual = document.getElementById(btn);
     
-    if (b1.getAttribute("estado") === "1") {
-        b1.style.background = "#99a1af";
-        b1.setAttribute("estado", "2");
+    if (atual.getAttribute("estado") === "1") {
+        atual.style.background = "#30ff3a";
+        atual.setAttribute("estado", "2");
     } else {
-        b1.style.background = "white";
-        b1.setAttribute("estado", "1");
+        atual.style.background = "white";
+        atual.setAttribute("estado", "1");
     }
 }
     return(
@@ -27,7 +27,7 @@ function FormAgendamento(){
                     </div>
                     
                     <div className="flex flex-col md:flex-row gap-2 cursor-pointer md:gap-4 w-full justify-center">
-                        <button id="b1" className="border-1 border-gray-600 cursor-pointer text-xl rounded-2xl p-2 "estado="1" onClick={actionBtn}>
+                        <button id="b1" className="border-1 border-gray-600 cursor-pointer text-xl rounded-2xl p-2 "estado="1" onClick={() => actionBtn("b1")}>
                             <h1>Clinica Sorria</h1>
                             <p className="text-xs">R. Padre João da Rocha, 235 - Paracuru</p>
                         </button>

@@ -11,7 +11,7 @@ function DadosProfissionais(){
     };
     
     return(        
-        <div id="backDados" className="bg-cover bg-center bg-[#ebebeb] h-full md:h-96 w-full items-center flex flex-col md:flex-row "
+        <div id="backDados" className="bg-cover bg-center bg-[#ebebeb] h-full md:h-96 w-[100vw] items-center flex flex-col md:flex-row "
         > 
             <div className=" flex flex-col mb-14 md:mb-0  text-center px-6 bgber-300 md:w-[50vw] items-center gap-3 ">
                 <div>

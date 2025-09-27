@@ -12,9 +12,9 @@ function Header() {
 
            
             <nav className="hidden lg:flex space-x-6">
-                <a className="text-[16px] text-[#4B2E6D] font-bold hover:underline" href="#Inicio">Início</a>
-                <a className="text-[16px] text-[#4B2E6D] font-bold hover:underline" href="#sobre">Sobre mim</a>
-                <a className="text-[16px] text-[#4B2E6D] font-bold hover:underline" href="#agendamentos">Agendamentos</a>
+                <a className="text-[16px] text-[#4B2E6D] font-bold hover:underline" href="#dadosProfissionais">Início</a>
+                <a className="text-[16px] text-[#4B2E6D] font-bold hover:underline" href="#apresentacao">Sobre mim</a>
+                <a className="text-[16px] text-[#4B2E6D] font-bold hover:underline" href="#avaliacoes">Avaliações</a>
                 <a className="text-[16px] text-[#4B2E6D] font-bold hover:underline" href="#localizacao">Localização</a>
             </nav>
 
