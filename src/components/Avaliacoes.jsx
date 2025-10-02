@@ -74,7 +74,7 @@ function Avaliacoes() {
     }
 ];
     return (
-        <div className=" bg-gradient-to-r from-purple-50 to-blue-100 overflow-hidden mt-10 h-[440px] md:h-[480px] w-full flex flex-col justify-center items-center">
+        <div className=" bg-gradient-to-r from-purple-50 to-blue-100 overflow-hidden mt-10 h-[460px] md:h-[500px] w-[100vw] flex flex-col justify-center items-center">
             <div className="text-center mb-6">
                 <h2 className="text-4xl font-bold text-purple-800 ">
                     Experiências reais  

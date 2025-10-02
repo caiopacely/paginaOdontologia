@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
+
 function Header() {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -12,11 +13,13 @@ function Header() {
 
            
             <nav className="hidden lg:flex space-x-6">
-                <a className="text-[16px] text-[#4B2E6D] font-bold hover:underline" href="#dadosProfissionais">Início</a>
-                <a className="text-[16px] text-[#4B2E6D] font-bold hover:underline" href="#apresentacao">Sobre mim</a>
-                <a className="text-[16px] text-[#4B2E6D] font-bold hover:underline" href="#avaliacoes">Avaliações</a>
-                <a className="text-[16px] text-[#4B2E6D] font-bold hover:underline" href="#localizacao">Localização</a>
+                <a className="text-[16px] text-[#4B2E6D] font-bold hover:underline" href="/#dadosProfissionais">Início</a>
+                <a className="text-[16px] text-[#4B2E6D] font-bold hover:underline" href="/#apresentacao">Sobre mim</a>
+                <a className="text-[16px] text-[#4B2E6D] font-bold hover:underline" href="/#avaliacoes">Avaliações</a>
+                <a className="text-[16px] text-[#4B2E6D] font-bold hover:underline" href="/#localizacao">Localização</a>
+                <a className="text-[16px] text-[#4B2E6D] font-bold hover:underline" href="/agendamentos">Agendamentos</a>
             </nav>
+
 
             <div className="lg:hidden">
                 <button
@@ -36,12 +39,14 @@ function Header() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 20 }}
                         transition={{ duration: 0.25 }}
-                        className="flex flex-col gap-1.5 text-center absolute top-17 right-0 h-56 w-full bg-[#57357e] rounded-b-4xl shadow-lg lg:hidden z-50"
+                        className="flex flex-col  text-center absolute top-17 right-0 h-56 w-full bg-[#57357e] rounded-b-4xl shadow-lg lg:hidden z-50"
                     >
-                        <a href="#Inicio" className="block py-2 text-xl text-white hover:bg-gray-800">Início</a>
-                        <a href="#sobre" className="block py-2 text-xl text-white hover:bg-gray-800">Sobre mim</a>
-                        <a href="#agendamentos" className="block py-2 text-xl text-white hover:bg-gray-800">Agendamentos</a>
-                        <a href="#localizacao" className="block py-2 text-xl text-white hover:bg-gray-800">Localização</a>
+                        <a href="/#dadosProfissionais" className="block py-2 text-xl text-white hover:bg-gray-800">Início</a>
+                        <a href="/#apresentacao" className="block py-2 text-xl text-white hover:bg-gray-800">Sobre mim</a>
+                        <a href="/#avaliacoes" className="block py-2 text-xl text-white hover:bg-gray-800">Avaliações</a>
+                        <a href="/#localizacao" className="block py-2 text-xl text-white hover:bg-gray-800">Localização</a>
+                        <a href="/agendamentos" className="block py-2 text-xl text-white hover:bg-gray-800">Agendamentos</a>
+                        
                     </motion.div>
                 )}
             </AnimatePresence>

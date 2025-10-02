@@ -22,8 +22,8 @@ function Footer(){
                         <div className=" flex flex-col gap-3">
                             <h1 className="text-xl">Siga-nos nas redes sociais!</h1>
                             <div className="flex gap-3">
-                                <a href=""> <i class="fa-brands fa-instagram text-3xl bg-[#4B2E6D] p-1 rounded-md"></i></a>
-                                <a href=""> <i class="fa-brands fa-tiktok text-3xl bg-[#4B2E6D] p-1 rounded-md"></i></a>
+                                <a href="https://www.instagram.com/marinna_barroso"> <i class="fa-brands fa-instagram text-3xl bg-[#4B2E6D] p-1 rounded-md"></i></a>
+                                <a href="https://www.tiktok.com/@marisolbmc"> <i class="fa-brands fa-tiktok text-3xl bg-[#4B2E6D] p-1 rounded-md"></i></a>
                                
                             </div>         
                         </div>
