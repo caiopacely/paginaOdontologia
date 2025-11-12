@@ -1,5 +1,7 @@
-import { Bs1CircleFill, Bs2CircleFill, Bs3CircleFill } from "react-icons/bs";
+import { Bs1CircleFill, Bs2CircleFill, Bs3CircleFill, Bs4CircleFill } from "react-icons/bs";
 import { useState } from "react";
+import api from "../Services/api";
+import MyComponent from "./Calendar";
 
 function FormAgendamento() {
     const clinicas = [
@@ -8,6 +10,7 @@ function FormAgendamento() {
         { id: "b3", nome: "Clínica Lovely", endereco: "Rua Dom Manuel de Medeiros, 2419" }
     ];
 
+    const [dataSelecionada, setDataSelecionada] = useState(null);
     const [selecionado, setSelecionado] = useState(null);
     const [formData, setFormData] = useState({
         nome: "",
@@ -61,8 +64,11 @@ function FormAgendamento() {
                 email: formData.email,
                 procedimento: formData.procedimento,
                 clinica: clinicaSelecionada.nome,
-                endereco: clinicaSelecionada.endereco
+                endereco: clinicaSelecionada.endereco,
+                data: dataSelecionada
             };
+
+            postConsulta(consulta);
 
             const mensagem = `*SOLICITACAO DE AGENDAMENTO*
    
@@ -99,6 +105,30 @@ _Aguardo retorno para confirmarmos data e horário disponíveis._`;
         }
     };
 
+    async function postConsulta(consulta) {
+        try {
+            const response = await api.post("/consultas", {
+                pacienteNome: consulta.nome,        
+                telefone: consulta.telefone,
+                email: consulta.email,
+                servico: consulta.procedimento,    
+                clinica: consulta.clinica,
+                endereco: consulta.endereco,
+                data: consulta.data
+            });
+
+            console.log("Consulta criada com sucesso:", response.data);
+        } catch (error) {
+            console.error("Erro ao enviar consulta:", error);
+            throw error;
+        }
+        }
+   
+    const handleDateChange = (date) => {
+        setDataSelecionada(date);
+        console.log("Data escolhida:", date);
+    }
+
     return (
         <div className="flex flex-col w-[84vw] lg:w-[72vw] mt-12">
             <h1 className="text-[#4B2E6D] font-bold text-3xl md:text-4xl lg:text-5xl text-start">
@@ -117,7 +147,7 @@ _Aguardo retorno para confirmarmos data e horário disponíveis._`;
                             <button
                                 key={c.id}
                                 onClick={() => setSelecionado(c.id)}
-                                className={`border-2 text-xl rounded-2xl p-1 text-[2.2vh] md:text-2xl md:p-2 transition
+                                className={`border-1 text-xl rounded-2xl p-1 text-[2.2vh] md:text-2xl md:p-2 transition
                                     ${selecionado === c.id ? "border-purple-600 bg-purple-100" : "border-gray-600"}
                                 `}
                             >
@@ -150,7 +180,7 @@ _Aguardo retorno para confirmarmos data e horário disponíveis._`;
                     </div>
 
                     {/* Passo 3: Informar dados */}
-                    <div className="flex items-center gap-4 text-2xl flex-col mt-2 mb-10">
+                    <div className="flex items-center gap-4 text-2xl flex-col mt-2 mb-10  w-full">
                         <div className="flex items-center gap-2">
                             <Bs3CircleFill className="text-[#4B2E6D]" />
                             <h1 className="text-2xl">Informe seus dados</h1>
@@ -162,7 +192,7 @@ _Aguardo retorno para confirmarmos data e horário disponíveis._`;
                                 placeholder="Nome"
                                 value={formData.nome}
                                 onChange={handleInputChange}
-                                className={`border rounded-md px-2 py-1 ${
+                                className={`border rounded-md px-2 py-1 text-[18px] md:text-2xl w-full md:w-[30%] ${
                                     errors.nome ? "border-2 border-red-500" : "border-gray-600"
                                 }`}
                             />
@@ -172,7 +202,7 @@ _Aguardo retorno para confirmarmos data e horário disponíveis._`;
                                 placeholder="Telefone"
                                 value={formData.telefone}
                                 onChange={handleInputChange}
-                                className={`border rounded-md px-2 py-1 ${
+                                className={`border rounded-md px-2 py-1 text-[18px] md:text-2xl${
                                     errors.telefone ? "border-2 border-red-500" : "border-gray-600"
                                 }`}
                             />
@@ -182,11 +212,19 @@ _Aguardo retorno para confirmarmos data e horário disponíveis._`;
                                 placeholder="Email"
                                 value={formData.email}
                                 onChange={handleInputChange}
-                                className={`border rounded-md px-2 py-1 ${
+                                className={`border rounded-md px-2 py-1 text-[18px] md:text-2xl w-full md:w-[30%]   ${
                                     errors.email ? "border-2 border-red-500" : "border-gray-600"
                                 }`}
                             />
                         </div>
+                        <div className="flex items-center gap-2">
+                            <Bs4CircleFill className="text-[#4B2E6D]" />
+                            <h1 className="text-2xl">Selecione a data</h1>
+                        </div>
+                        <div className="shadow-[0_0_12px_rgba(0,0,0,0.1)] h-[54vh] md:h-[56vh] p-2 rounded-xl w-[90%] md:w-[80%] lg:w-[40%]  flex justify-center">
+                             <MyComponent onDateChange={handleDateChange}></MyComponent>
+                        </div>
+                       
                     </div>
 
                     {/* Botão de confirmação */}
